@@ -1,0 +1,31 @@
+1. Litery:
+
+D - Dysk
+E - Pustka
+X - Wyjście
+P - Punkty
+G - Trawa
+O - Gracz
+R - Kamień
+S - Niezniszczalna ściana
+T - Wschodni tunel
+N - Północny tunel (Południowy?)
+Z - Zachodni tunel
+V - Południowy tunel (Północny?)
+W - Ściana
+
+2. Kolory:
+
+Limonowy (#c4ff0e) - Trawa
+Pomarańczowy (#ff7f27) - Gracz
+Różowy (#b83bda) - Punkty
+Bordowy (#88001b) - Dysk
+Jasonoszary (#c3c3c3) - Pustka
+Ciemnoszary (#585858) - Niszczalna ściana
+Czarny (#000000) - Niezniszczalna ściana
+Brązowy (#b97a56) - Kamień
+Żółty (#fff200) - Wschodni tunel
+Jasnożółty (#fdeca6) - Południowy tunel
+Zielony (#0ed145) - Zachodni tunel
+Różany (#ffaec8) - Północny tunel
+Turkusowy (#00a8f3) - Wyjście

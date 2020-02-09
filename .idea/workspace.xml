@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="KamienieNaRyj:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1c027f68-d559-44a2-a78e-096cc8d077ce" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="package.json" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1VThHeopDuT3D5THcSSFm3RZGjl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="classes.Main" />
+      <module name="KamienieNaRyj" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Kamienie na ryj" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/KamienieNaRyj_jar/KamienieNaRyj.jar" />
+      <option name="WORKING_DIRECTORY" value="D:\AASem3\PO\KamienieNaRyj" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="KamienieNaRyj:jar" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JAR Application.Kamienie na ryj" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c027f68-d559-44a2-a78e-096cc8d077ce" name="Default Changelist" comment="" />
+      <created>1577282905785</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577282905785</updated>
+      <workItem from="1577282909273" duration="7930000" />
+      <workItem from="1577305571024" duration="86392000" />
+      <workItem from="1577729954475" duration="191000" />
+      <workItem from="1577732402473" duration="15107000" />
+      <workItem from="1578232088343" duration="20194000" />
+      <workItem from="1578259857296" duration="32000" />
+      <workItem from="1578283492396" duration="3090000" />
+      <workItem from="1578306824980" duration="3463000" />
+      <workItem from="1578433490933" duration="608000" />
+      <workItem from="1578484602498" duration="6571000" />
+      <workItem from="1579089496998" duration="7442000" />
+      <workItem from="1579381129627" duration="7348000" />
+      <workItem from="1579396272988" duration="377000" />
+      <workItem from="1579623593731" duration="669000" />
+      <workItem from="1579707946203" duration="417000" />
+      <workItem from="1579710909319" duration="1207000" />
+      <workItem from="1579883478952" duration="107000" />
+      <workItem from="1579903627050" duration="741000" />
+      <workItem from="1580806275316" duration="61000" />
+      <workItem from="1580832623131" duration="1199000" />
+      <workItem from="1580856733359" duration="618000" />
+      <workItem from="1581017690205" duration="47101000" />
+      <workItem from="1581261530038" duration="1522000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="private List&lt;IMapElement&gt; movingElements = new LinkedList&lt;&gt;();" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
