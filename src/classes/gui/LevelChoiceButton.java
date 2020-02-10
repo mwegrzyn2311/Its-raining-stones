@@ -8,7 +8,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -30,9 +32,10 @@ public class LevelChoiceButton extends JButton {
         });
     }
 
-    public LevelChoiceButton(Game game, Path path) throws IOException {
+
+    public LevelChoiceButton(Game game, InputStream stream) throws IOException {
         this.game = game;
-        String parameters = new String(Files.readAllBytes(path));
+        String parameters = new String(stream.readAllBytes());
         this.arguments = new JSONObject(parameters);
         JSONArray map = this.arguments.getJSONArray("map");
         String name = (String) this.arguments.get("name");
@@ -47,6 +50,7 @@ public class LevelChoiceButton extends JButton {
             levelPanel.requestFocusInWindow();
         });
     }
+
 
     private void constructButton() {
         this.setBackground(null);

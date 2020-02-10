@@ -15,6 +15,7 @@ public class Game extends JFrame {
         this.setLayout(new BorderLayout());
 
         this.add(new StartingScreen(this));
+        // this.add(new LevelChoicePanel(this));
 
         this.setResizable(false);
         this.pack();
