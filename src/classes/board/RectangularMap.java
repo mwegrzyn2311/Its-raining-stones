@@ -9,6 +9,7 @@ import org.json.JSONObject;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.lang.invoke.VolatileCallSite;
 import java.util.Comparator;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -165,6 +166,10 @@ public class RectangularMap{
                         elements[j][i] = new Wall(new Vector2d(j, i));
                         break;
                     default:
+                        /*
+                        elements[j][i] = new Empty(new Vector2d(j,i));
+                        System.out.println("Argument " + clr + " at " + new Vector2d(j,i) + " does not correspond to any existing element");
+                         */
                         throw new IllegalArgumentException("Argument " + clr + " at " + new Vector2d(j,i) + " does not correspond to any existing element");
                 }
             }

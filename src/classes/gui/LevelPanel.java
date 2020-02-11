@@ -60,7 +60,7 @@ public class LevelPanel extends JPanel {
         this.logic = this.map.logic;
         this.player = this.map.player;
         this.tilesMap = new HashMap<>();
-        this.width = Math.min(this.map.width, 16);
+        this.width = Math.min(this.map.width, 17);
         this.height = Math.min(this.map.height, 10);
         setKeyBindings();
         this.setLayout(new GridBagLayout());
@@ -197,5 +197,28 @@ public class LevelPanel extends JPanel {
                 resetLevel();
             }
         });
+        inputMap.put(KeyStroke.getKeyStroke("L"), "Slow");
+        actionMap.put("Slow", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                slowDown();
+            }
+        });
+        inputMap.put(KeyStroke.getKeyStroke("P"), "Speed");
+        actionMap.put("Speed", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                speedUp();
+            }
+        });
+    }
+    private void slowDown() {
+        if(this.timer.getDelay() < 180*27)
+            this.timer.setDelay(this.timer.getDelay()*3);
+    }
+
+    private void speedUp() {
+        if(this.timer.getDelay() > 20)
+            this.timer.setDelay(this.timer.getDelay()/3);
     }
 }

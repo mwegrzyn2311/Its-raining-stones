@@ -9,6 +9,7 @@ public class Tunnel extends AbstractMapElement{
     public Tunnel(Vector2d initialPosition, MoveDirection dir) {
         super(initialPosition);
         this.dir = dir;
+        this.destructible = false;
         switch (dir) {
             case NORTH:
                 this.image = ElementImage.NORTHTUNNEL;

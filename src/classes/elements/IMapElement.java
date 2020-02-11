@@ -42,4 +42,8 @@ public interface IMapElement {
      *
      */
     void stopFalling();
+    /**
+     *
+     */
+    boolean isDestructible();
 }

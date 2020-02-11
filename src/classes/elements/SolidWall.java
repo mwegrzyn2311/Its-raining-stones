@@ -8,6 +8,7 @@ public class SolidWall extends AbstractMapElement{
     public SolidWall(Vector2d initialPosition) {
         super(initialPosition);
         this.image = ElementImage.SOLID;
+        this.destructible = false;
     }
 
     public String toString(){

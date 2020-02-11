@@ -54,6 +54,13 @@ public class MapLogic {
             if(dir != tunnel.dir)
                 return;
             Vector2d destination = newPosition.add(dir.toUnitVector());
+            IMapElement destEle = this.map.getElement(destination);
+            while(destEle instanceof Tunnel) {
+                if(((Tunnel) destEle).dir != dir)
+                    return;
+                destination = destination.add(dir.toUnitVector());
+                destEle = this.map.getElement(destination);
+            }
             if(!this.map.canMoveTo(destination))
                 return;
             IMapElement ele = this.map.getElement(destination);
@@ -190,7 +197,7 @@ public class MapLogic {
             belowPosition = currentPosition.add(new Vector2d(0, 1));
             belowElement = this.map.getElement(belowPosition);
             // Normal fall
-            if(movingElement instanceof Disc && !(belowElement instanceof Empty || belowElement instanceof Explosion) && movingElement.isFalling()) {
+            if(movingElement instanceof Disc && !(belowElement instanceof Empty || belowElement instanceof Explosion || belowElement.isFalling()) && movingElement.isFalling()) {
                 kaboom(currentPosition);
                 if (belowElement instanceof Disc) {
                     kaboom(belowPosition);
@@ -211,10 +218,14 @@ public class MapLogic {
                     kaboom(belowPosition);
                 }
                 //Stop moving faster than you might(an element that stop moving cannot move, so we can check that one step ahead))
+                /*
                 if(this.map.stopsMovingElement(belowPosition.add(new Vector2d(0,1))) && !(movingElement instanceof Disc)) {
                     movingElement.stopFalling();
                     this.movingElements.remove(movingElement);
                 }
+
+                 */
+
                 startMovingElements(currentPosition);
             }// Now roll down
             else if(belowElement.isMovable()){
@@ -238,6 +249,8 @@ public class MapLogic {
                         startMovingElements(currentPosition);
                         iter.remove();
                     } else {
+                        if(movingElement instanceof Disc)
+                        System.out.println("Disc stops falling");
                         movingElement.stopFalling();
                         this.movingElements.remove(movingElement);
                     }
@@ -273,7 +286,7 @@ public class MapLogic {
                 for(int j = -1; j<= 1; j++){
                     explodingPosition = position.add(new Vector2d(i,j));
                     explodingElement = this.map.getElement(explodingPosition);
-                    if(explodingElement instanceof SolidWall)
+                    if(!explodingElement.isDestructible())
                         continue;
                     if(explodingElement instanceof Player) {
                         killThePlayer();

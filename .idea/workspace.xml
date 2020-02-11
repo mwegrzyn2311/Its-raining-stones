@@ -7,25 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c027f68-d559-44a2-a78e-096cc8d077ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/oldLevels/Level1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oldLevels/Level2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oldLevels/Level3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/studentNorth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/studentSouth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/studentWest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/levelPatterns/Level3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/levelPatterns/Level1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/levelPatterns/Level2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/levelPatterns/Level5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/levelPatterns/Level6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/levels/Level5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/levels/Level6.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/KamienieNaRyj_jar/KamienieNaRyj.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/KamienieNaRyj_jar/KamienieNaRyj.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/board/RectangularMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/board/RectangularMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/elements/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/elements/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/ElementImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/ElementImage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/LevelChoicePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/LevelChoicePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/LevelPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/LevelPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/levelPatterns/Level3.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/levelPatterns/Level3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/levels/Level4.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/levels/Level4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/levels/level1.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/levels/level1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/levels/level2.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/levels/level2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/levels/level3.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/levels/level3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/board/MapLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/board/MapLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/board/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/board/RectangularMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/elements/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/elements/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/gui/ElementImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/gui/ElementImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/elements/AbstractMapElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/elements/AbstractMapElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/elements/IMapElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/elements/IMapElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/elements/SolidWall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/elements/SolidWall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/elements/Tunnel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/elements/Tunnel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/gui/LevelChoicePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/gui/LevelChoicePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/gui/LevelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/gui/LevelPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/levelPatterns/Level3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/levelPatterns/Level3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/levels/Level1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/Level1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/levels/Level2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/Level2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/levels/Level3.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/Level3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/levels/Level4.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/Level4.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +64,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Kuba" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -144,7 +153,7 @@
       <workItem from="1581261530038" duration="1721000" />
       <workItem from="1581348440238" duration="3673000" />
       <workItem from="1581355728066" duration="6156000" />
-      <workItem from="1581422243821" duration="4246000" />
+      <workItem from="1581422243821" duration="19090000" />
     </task>
     <servers />
   </component>

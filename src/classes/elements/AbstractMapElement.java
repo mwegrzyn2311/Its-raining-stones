@@ -11,6 +11,7 @@ public abstract class AbstractMapElement implements IMapElement {
     protected boolean wait = false;
     protected boolean falling = false;
     protected boolean movable = false;
+    protected boolean destructible = true;
     public AbstractMapElement(Vector2d initialPosition){
         this.position = initialPosition;
     }
@@ -50,4 +51,6 @@ public abstract class AbstractMapElement implements IMapElement {
     }
 
     public void stopFalling(){this.falling = false;}
+
+    public boolean isDestructible(){return this.destructible;}
 }
