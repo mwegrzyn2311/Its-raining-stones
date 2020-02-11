@@ -72,7 +72,7 @@ public class RectangularMap{
                         elements[j][i] = new Grass(new Vector2d(j, i));
                         break;
                     case ("O"):
-                        this.player = new Player(new Vector2d(j, i));
+                        this.player = new Player(new Vector2d(j, i), this);
                         elements[j][i] = this.player;
                         break;
                     case ("R"):
@@ -139,7 +139,7 @@ public class RectangularMap{
                         elements[j][i] = new Grass(new Vector2d(j, i));
                         break;
                     case (-32985):
-                        this.player = new Player(new Vector2d(j, i));
+                        this.player = new Player(new Vector2d(j, i), this);
                         elements[j][i] = this.player;
                         break;
                     case (-4621738):

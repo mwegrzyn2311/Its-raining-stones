@@ -7,25 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c027f68-d559-44a2-a78e-096cc8d077ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/runnable/KamienieNaRyj.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/levels/Level4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/KamienieNaRyj_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/KamienieNaRyj_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_20190722.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/json_20190722.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oldLevels/Level1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oldLevels/Level2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oldLevels/Level3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/studentNorth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/studentSouth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/studentWest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/levelPatterns/Level3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/externalLibraries/json-20190722.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/externalLibraries/json-20190722.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/KamienieNaRyj_jar/KamienieNaRyj.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/KamienieNaRyj_jar/KamienieNaRyj.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/META-INF/KamienieNaRyj.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/LevelChoiceButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/LevelChoiceButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/board/RectangularMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/board/RectangularMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/elements/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/elements/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/ElementImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/ElementImage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/LevelChoicePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KamienieNaRyj/classes/gui/LevelChoicePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KamienieNaRyj/levelPatterns/Playable level.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/gui/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/gui/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/gui/LevelChoiceButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/gui/LevelChoiceButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/board/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/board/RectangularMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/elements/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/elements/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/gui/ElementImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/gui/ElementImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/gui/LevelChoicePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/gui/LevelChoicePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/levelPatterns/Playable level.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/levelPatterns/Level4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/levels/level1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/Level1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/levels/level2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/Level2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/levels/level3.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/Level3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/gui/LevelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/gui/LevelPanel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +79,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.Kamienie na ryj">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="classes.Main" />
       <module name="KamienieNaRyj" />
@@ -143,7 +143,8 @@
       <workItem from="1581017690205" duration="47101000" />
       <workItem from="1581261530038" duration="1721000" />
       <workItem from="1581348440238" duration="3673000" />
-      <workItem from="1581355728066" duration="5589000" />
+      <workItem from="1581355728066" duration="6156000" />
+      <workItem from="1581422243821" duration="4246000" />
     </task>
     <servers />
   </component>

@@ -49,7 +49,7 @@ public class LevelChoicePanel extends JPanel {
         */
         int i;
         String base = "Level";
-        for(i = 1; i <= 3; i++) {
+        for(i = 1; i <= 2; i++) {
             InputStream stream = getClass().getResourceAsStream("/levels/" + base + i + ".json");
             this.add(new LevelChoiceButton(game, stream));
         }

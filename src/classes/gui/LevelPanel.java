@@ -88,17 +88,17 @@ public class LevelPanel extends JPanel {
         } else if(oneEat != null) {
             logic.eat(oneEat);
         }
-        oneEat = null;
         if(lastMove != null) {
             logic.movePlayer(lastMove);
         } else if(oneMove != null) {
             logic.movePlayer(oneMove);
         }
-        oneMove = null;
 
         logic.moveElements();
         logic.explodeEveryDisc();
         updateTiles();
+        oneEat = null;
+        oneMove = null;
         if(logic.gameOver){
             resetTurns--;
             if(resetTurns < 0)

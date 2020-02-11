@@ -14,20 +14,26 @@ public enum ElementImage {
     GRASS("/images/grass.png"),
     ROCK("/images/rock.png"),
     PLAYER("/images/student.png"),
+    SOLID("/images/solidWall.png"),
+
+    SOUTHPLAYER("/images/studentSouth.png"),
+    WESTPLAYER("/images/studentWest.png"),
+    NORTHPLAYER("/images/studentNorth.png"),
+
     EXPLOSION("/images/explosion.png"),
     WALL("/images/wall.png"),
     EASTTUNNEL("/images/eastTunnel.png"),
     SOUTHTUNNEL("/images/southTunnel.png"),
     WESTTUNNEL("/images/westTunnel.png"),
-    NORTHTUNNEL("/images/northTunnel.png"),
-    SOLID("/images/solidWall.png");
+    NORTHTUNNEL("/images/northTunnel.png");
+
 
 
     public Image image;
 
     ElementImage(String imagePath) {
         try {
-            this.image = ImageIO.read(this.getClass().getResource(imagePath));
+            this.image = ImageIO.read(getClass().getResource(imagePath));
             if (this.image == null)
                 System.out.println("ElementImage initialization is wrong");
         } catch (IOException ex) {
