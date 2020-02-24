@@ -29,6 +29,7 @@ public class MapLogic {
             return;
         Vector2d playerPosition = this.map.getPlayerPosition();
         Vector2d newPosition = playerPosition.add(dir.toUnitVector());
+        // We start by checking if player can move to position he is trying to get to (Meaning it has to contain either grass, empty cell or points)
         if(map.canMoveTo(newPosition)){
             IMapElement ele = this.map.getElement(newPosition);
             if(ele instanceof Exit){
@@ -40,7 +41,8 @@ public class MapLogic {
             this.map.setElement(playerPosition, new Empty(playerPosition));
             this.map.setElement(newPosition, this.map.player);
             startMovingElements(playerPosition);
-        } else if(map.canPushAt(newPosition, dir)){
+        } //If it is not the case, we check if player can push element at the position player is trying to get to
+        else if(map.canPushAt(newPosition, dir)){
             Vector2d destination = newPosition.add(dir.toUnitVector());
             IMapElement empty = this.map.getElement(destination);
             IMapElement movable = this.map.getElement(newPosition);
@@ -49,7 +51,8 @@ public class MapLogic {
             this.map.setElement(playerPosition, empty);
             startMovingElements(playerPosition);
             startMovingPushedElement(destination);
-        } else if(this.map.getElement(newPosition) instanceof Tunnel) {
+        } //Then we check if player is trying to get to unblocked tunnel from proper direction
+        else if(this.map.getElement(newPosition) instanceof Tunnel) {
             Tunnel tunnel = (Tunnel) this.map.getElement(newPosition);
             if(dir != tunnel.dir)
                 return;
@@ -100,6 +103,7 @@ public class MapLogic {
         this.map.levelPanel.scoreboard.updateText();
     }
 
+    //If element just got pushed we have to check if it will start falling/rolling and we do it inside this method
     public void startMovingPushedElement(Vector2d position){
         Vector2d below = position.add(new Vector2d(0,1));
         if(!this.map.isInMap(below))
@@ -132,9 +136,9 @@ public class MapLogic {
         }
     }
 
-    // Function which is called whenever a tile becomes empty, so position argument is always instanceof Empty
+    // Function which is called whenever a tile becomes empty (so Element at position is always instanceof Empty)
     private void startMovingElements(Vector2d position){
-        // Falling
+        // Falling (For that we have to check if above element is movable)
         Vector2d above = position.add(new Vector2d(0,-1));
         IMapElement aboveElement = this.map.getElement(above);
         if(aboveElement != null && aboveElement.isMovable()) {
@@ -142,7 +146,7 @@ public class MapLogic {
                 this.movingElements.add(aboveElement);
             aboveElement.startFalling();
         }
-        // Rolling right or left
+        // Rolling right or left (We may have just unblocked a grass that was stopping movable element from rolling down)
         Vector2d below = position.add(new Vector2d(0,1));
         if(this.map.getElement(below) instanceof Empty){
             Vector2d right = position.add(new Vector2d(1,0));
@@ -156,7 +160,7 @@ public class MapLogic {
                     this.movingElements.add(this.map.getElement(left));
             }
         }
-        // Rolling rightTop or leftTop
+        // Rolling rightTop or leftTop (We may have just unblocked a spot where an object can roll down)
         if(aboveElement instanceof Empty){
             Vector2d rightTop = above.add(new Vector2d(1,0));
             if(this.map.isMovableElement(rightTop) && this.map.isMovableElement(rightTop.add(new Vector2d(0,1)))) {
@@ -172,7 +176,7 @@ public class MapLogic {
         }
     }
 
-
+    // Major method responsible for moving rolling and causing explosions of objects
     public void moveElements(){
         Vector2d currentPosition;
         Vector2d belowPosition;
@@ -217,15 +221,6 @@ public class MapLogic {
                 if(belowElement instanceof Disc && !belowElement.isFalling()) {
                     kaboom(belowPosition);
                 }
-                //Stop moving faster than you might(an element that stop moving cannot move, so we can check that one step ahead))
-                /*
-                if(this.map.stopsMovingElement(belowPosition.add(new Vector2d(0,1))) && !(movingElement instanceof Disc)) {
-                    movingElement.stopFalling();
-                    this.movingElements.remove(movingElement);
-                }
-
-                 */
-
                 startMovingElements(currentPosition);
             }// Now roll down
             else if(belowElement.isMovable()){
@@ -250,14 +245,18 @@ public class MapLogic {
                         iter.remove();
                     } else {
                         if(movingElement instanceof Disc)
-                        System.out.println("Disc stops falling");
                         movingElement.stopFalling();
                         this.movingElements.remove(movingElement);
                     }
                 }
-
+            } //If the element didn't move, it means it has to be removed from moving elements collection and it has to stop falling
+            else {
+                movingElement.stopFalling();
+                this.movingElements.remove(movingElement);
+                iter.remove();
             }
         }
+        // Some elements' properties changes, so those that moved have to be added back to movable elements (in our level map)
         this.map.movableElements.addAll(movingElements);
     }
 
