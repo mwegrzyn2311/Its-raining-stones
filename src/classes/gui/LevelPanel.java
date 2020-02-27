@@ -13,6 +13,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.HashMap;
@@ -36,22 +37,25 @@ public class LevelPanel extends JPanel {
     public MoveDirection oneEat = null;
     public Scoreboard scoreboard;
     private JSONArray rectMap = null;
+    int startingPlayerIndex = 0;
     private BufferedImage image = null;
     private Game game;
     private Timer timer;
     private MoveBindings bindings;
 
 
-    public LevelPanel(BufferedImage image, Game game) {
+    public LevelPanel(BufferedImage image, Game game, int index) {
         this.game = game;
         this.image = image;
-        this.map = new RectangularMap(image, this);
+        this.startingPlayerIndex = index;
+        this.map = new RectangularMap(image, this, this.startingPlayerIndex);
         constructPanel();
     }
-    public LevelPanel(JSONArray rectMap, Game game) {
+    public LevelPanel(JSONArray rectMap, Game game, int index) {
         this.game = game;
         this.rectMap = rectMap;
-        this.map = new RectangularMap(rectMap, this);
+        this.startingPlayerIndex = index;
+        this.map = new RectangularMap(rectMap, this, this.startingPlayerIndex);
         constructPanel();
     }
 
@@ -85,12 +89,16 @@ public class LevelPanel extends JPanel {
         logic.explosionsOver();
         if(lastEat != null) {
             logic.eat(lastEat);
+            this.player.setDirection(lastEat);
         } else if(oneEat != null) {
             logic.eat(oneEat);
+            this.player.setDirection(oneEat);
         }
         if(lastMove != null) {
             logic.movePlayer(lastMove);
+            this.player.setDirection(lastMove);
         } else if(oneMove != null) {
+            this.player.setDirection(oneMove);
             logic.movePlayer(oneMove);
         }
 
@@ -171,10 +179,10 @@ public class LevelPanel extends JPanel {
 
     private void resetLevel(){
         if(this.rectMap != null) {
-            this.map = new RectangularMap(this.rectMap, this);
+            this.map = new RectangularMap(this.rectMap, this, this.startingPlayerIndex);
         }
         if (this.image != null) {
-            this.map = new RectangularMap(this.image, this);
+            this.map = new RectangularMap(this.image, this, this.startingPlayerIndex);
         }
         this.logic = map.logic;
         this.player = map.player;
@@ -212,6 +220,13 @@ public class LevelPanel extends JPanel {
             }
         });
     }
+
+    public void switchPlayer() {
+        this.map.nextPlayer();
+        this.player = this.map.player;
+        updateTiles();
+    }
+
     private void slowDown() {
         if(this.timer.getDelay() < 180*27)
             this.timer.setDelay(this.timer.getDelay()*3);

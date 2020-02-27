@@ -10,11 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class Main {
-    //TODO: Add fullscreen option
-    //TODO: Add tunnels
-    //TODO: Add more levels
-    //TODO: Maybe creating levels? (Now that would probably be very demanding though)
-
+    //TODO: Add switching between the players
     public static void main(String[] args){
         SwingUtilities.invokeLater(() -> {
             try {

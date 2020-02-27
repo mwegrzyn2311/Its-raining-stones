@@ -18,13 +18,13 @@ public class LevelChoiceButton extends JButton {
     private JSONObject arguments;
     private Game game;
 
-    public LevelChoiceButton(Game game, BufferedImage image, String name) {
+    public LevelChoiceButton(Game game, BufferedImage image, String name, int index) {
         this.game = game;
         this.setText(name);
         constructButton();
         this.addActionListener(actionEvent -> {
             game.getContentPane().removeAll();
-            LevelPanel levelPanel = new LevelPanel(image, game);
+            LevelPanel levelPanel = new LevelPanel(image, game, index);
             game.add(levelPanel);
             game.setVisible(true);
             game.pack();
@@ -33,7 +33,7 @@ public class LevelChoiceButton extends JButton {
     }
 
 
-    public LevelChoiceButton(Game game, InputStream stream) throws IOException {
+    public LevelChoiceButton(Game game, InputStream stream, int index) throws IOException {
         this.game = game;
         String parameters = new String(stream.readAllBytes());
         this.arguments = new JSONObject(parameters);
@@ -43,7 +43,7 @@ public class LevelChoiceButton extends JButton {
         constructButton();
         this.addActionListener(actionEvent -> {
             game.getContentPane().removeAll();
-            LevelPanel levelPanel = new LevelPanel(map, game);
+            LevelPanel levelPanel = new LevelPanel(map, game, index);
             game.add(levelPanel);
             game.pack();
             game.setVisible(true);

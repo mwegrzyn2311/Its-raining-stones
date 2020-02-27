@@ -18,53 +18,22 @@ public class LevelChoicePanel extends JPanel {
         this.setPreferredSize(new Dimension(16*50, 10*50));
 
         this.setBorder(null);
-        /*
-        Stream<Path> pngFiles = Files.list(Paths.get("src/levelPatterns"));
-        int pngCount = (int)pngFiles.count();
-        Stream<Path> files = Files.list(Paths.get("src/levels"));
-        int levelsCount = (int)files.count();
-        this.setLayout(new GridLayout(levelsCount+pngCount+1,1));
-        this.setBackground(new Color(86, 86, 86));
-        files = Files.list(Paths.get("src/levels"));
-        files.forEach(file -> {
-            try {
-                // this.levels.add(new LevelChoiceButton(game, file));
-                this.add(new LevelChoiceButton(game, file));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
-
-        pngFiles = Files.list(Paths.get("src/levelPatterns"));
-        pngFiles.forEach(file -> {
-            try {
-                String path = String.valueOf(file);
-                BufferedImage image = ImageIO.read(new File(path));
-                String name = path.substring(18, path.length()-4);
-                this.add(new LevelChoiceButton(game, image, name));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
-        */
         int i;
         String base = "Level";
-        /*
-        for(i = 1; i <= 2; i++) {
+        this.setLayout(new GridLayout(7,1));
+        for(i = 1; i <= 7; i++) {
             InputStream stream = getClass().getResourceAsStream("/levels/" + base + i + ".json");
-            this.add(new LevelChoiceButton(game, stream));
-        }
-
-         */
-
-        for(i = 1; i <= 5; i++) {
-            InputStream stream = getClass().getResourceAsStream("/levels/" + base + i + ".json");
-            String name = (String) new JSONObject(new String(stream.readAllBytes())).get("name");
+            if(stream == null)
+                continue;
+            JSONObject jsonInfo = new JSONObject(new String(stream.readAllBytes()));
+            String name = (String) jsonInfo.get("name");
+            int index = 0;
+            if(jsonInfo.has("playerIndex"))
+                index = (int) jsonInfo.get("playerIndex");
             BufferedImage image = ImageIO.read(getClass().getResource("/levelPatterns/" + base + i + ".png"));
-            this.add(new LevelChoiceButton(game, image, name));
+            this.add(new LevelChoiceButton(game, image, name, index));
         }
 
-        this.setLayout(new GridLayout(i-1,1));
         this.setBackground(new Color(86, 86, 86));
     }
 }

@@ -10,15 +10,15 @@ import org.json.JSONObject;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.lang.invoke.VolatileCallSite;
-import java.util.Comparator;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
+import java.util.List;
 
 public class RectangularMap{
     public IMapElement[][] elements;
     public int width;
     public int height;
     public Player player;
+    public List<Player> players = new ArrayList<>();
     public MapLogic logic;
     public LevelPanel levelPanel;
     public int totalPoints;
@@ -42,7 +42,7 @@ public class RectangularMap{
         }
     });
 
-    public RectangularMap(JSONArray map, LevelPanel levelPanel) {
+    public RectangularMap(JSONArray map, LevelPanel levelPanel, int index) {
         this.levelPanel = levelPanel;
         this.logic = new MapLogic(this);
         totalPoints = 0;
@@ -75,6 +75,7 @@ public class RectangularMap{
                     case ("O"):
                         this.player = new Player(new Vector2d(j, i), this);
                         elements[j][i] = this.player;
+                        this.players.add(this.player);
                         break;
                     case ("R"):
                         elements[j][i] = new Rock(new Vector2d(j, i));
@@ -106,10 +107,12 @@ public class RectangularMap{
                 if(elements[j][i].isMovable())
                     this.logic.startMovingPushedElement(new Vector2d(j,i));
             }
+            if(index >=0 && index < this.players.size())
+                this.player = this.players.get(index);
         }
     }
 
-    public RectangularMap(BufferedImage image, LevelPanel levelPanel) {
+    public RectangularMap(BufferedImage image, LevelPanel levelPanel, int index) {
         this.levelPanel = levelPanel;
         this.logic = new MapLogic(this);
         totalPoints = 0;
@@ -142,6 +145,7 @@ public class RectangularMap{
                     case (-32985):
                         this.player = new Player(new Vector2d(j, i), this);
                         elements[j][i] = this.player;
+                        this.players.add(this.player);
                         break;
                     case (-4621738):
                         elements[j][i] = new Rock(new Vector2d(j, i));
@@ -177,6 +181,8 @@ public class RectangularMap{
                 if(elements[j][i].isMovable())
                     this.logic.startMovingPushedElement(new Vector2d(j,i));
             }
+            if(index >=0 && index < this.players.size())
+                this.player = this.players.get(index);
         }
     }
 
@@ -229,5 +235,12 @@ public class RectangularMap{
 
     public Vector2d getPlayerPosition(){
         return this.player.getPosition();
+    }
+
+    public void nextPlayer() {
+        if(this.players.indexOf(this.player) < this.players.size() - 1)
+            this.player = this.players.get(this.players.indexOf(this.player) + 1);
+        else
+            this.player = this.players.get(0);
     }
 }

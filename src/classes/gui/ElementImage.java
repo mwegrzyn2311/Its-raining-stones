@@ -7,25 +7,25 @@ import java.awt.*;
 import java.io.IOException;
 
 public enum ElementImage {
-    DISC("/images/disc.png"),
-    POINT("/images/ects.png"),
-    EMPTY("/images/empty.png"),
-    EXIT("/images/exit.png"),
-    GRASS("/images/grass.png"),
-    ROCK("/images/rock.png"),
-    PLAYER("/images/student.png"),
-    SOLID("/images/solidWall.png"),
+    DISC("disc.png"),
+    POINT("point.png"),
+    EMPTY("empty.png"),
+    EXIT("exit.png"),
+    GRASS("grass.png"),
+    ROCK("rock.png"),
+    SOLID("solidWall.png"),
 
-    SOUTHPLAYER("/images/studentSouth.png"),
-    WESTPLAYER("/images/studentWest.png"),
-    NORTHPLAYER("/images/studentNorth.png"),
+    PLAYER("player.png"),
+    SOUTHPLAYER("playerSouth.png"),
+    WESTPLAYER("playerWest.png"),
+    NORTHPLAYER("playerNorth.png"),
 
-    EXPLOSION("/images/explosion.png"),
-    WALL("/images/wall.png"),
-    EASTTUNNEL("/images/eastTunnel.png"),
-    SOUTHTUNNEL("/images/southTunnel.png"),
-    WESTTUNNEL("/images/westTunnel.png"),
-    NORTHTUNNEL("/images/northTunnel.png");
+    EXPLOSION("explosion.png"),
+    WALL("wall.png"),
+    EASTTUNNEL("eastTunnel.png"),
+    SOUTHTUNNEL("southTunnel.png"),
+    WESTTUNNEL("westTunnel.png"),
+    NORTHTUNNEL("northTunnel.png");
 
 
 
@@ -33,7 +33,7 @@ public enum ElementImage {
 
     ElementImage(String imagePath) {
         try {
-            this.image = ImageIO.read(getClass().getResource(imagePath));
+            this.image = ImageIO.read(getClass().getResource("/images/" + imagePath));
             if (this.image == null)
                 System.out.println("ElementImage initialization is wrong");
         } catch (IOException ex) {

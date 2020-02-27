@@ -36,17 +36,6 @@ public class Player extends AbstractMapElement {
 
     @Override
     public Image getImage() {
-        MoveDirection dir = this.map.levelPanel.lastMove;
-        if(dir == null)
-            dir = this.map.levelPanel.oneMove;
-        if(dir == null) {
-            dir = this.map.levelPanel.lastEat;
-        }
-        if(dir == null) {
-            dir = this.map.levelPanel.oneEat;
-        }
-        if(dir != null)
-            this.lastMove = dir;
         switch(this.lastMove){
             case NORTH:
                 return this.imageNorth.image;
@@ -61,6 +50,8 @@ public class Player extends AbstractMapElement {
         return this.image.image;
     }
 
-
+    public void setDirection(MoveDirection dir) {
+        this.lastMove = dir;
+    }
 
 }
