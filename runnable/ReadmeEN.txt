@@ -1,4 +1,4 @@
-English name: "Why so many rocks on my face?"
+English name: "It's raining stones!"
 Goal: Reach the Exit after collecting as much points as possible.
 Controls:
 	- Arrow keys to move the player

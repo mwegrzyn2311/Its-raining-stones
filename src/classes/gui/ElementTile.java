@@ -15,7 +15,6 @@ public class ElementTile extends JComponent {
     public void changeImage(Image image){
         if(image != this.image){
             this.image = image;
-            //this.repaint();
             repaint(0,0,getWidth(),getHeight());
         }
     }
